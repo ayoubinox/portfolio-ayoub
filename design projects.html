@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gallery of my design</title>
+<style>
+body {
+	margin: 3;
+}
+
+.image-grid {
+	--gap: 16px;
+	--num-cols: 4;
+	--row-height: 300px;
+
+	box-sizing: border-box;
+	padding: var(--gap);
+
+	display: grid;
+	grid-template-columns: repeat(var(--num-cols), 1fr);
+	grid-auto-rows: var(--row-height);
+	gap: var(--gap);
+}
+
+.image-grid>img {
+	width: 90%;
+	height: 90%;
+	object-fit: cover;
+}
+
+.image-grid-col-2 {
+	grid-column: span 2;
+}
+
+.image-grid-row-2 {
+	grid-row: span 2;
+}
+
+/* Anything udner 1024px */
+@media screen and (max-width: 1024px) {
+	.image-grid {
+		--num-cols: 2;
+		--row-height: 200px;
+	}
+}
+</style>
+</head>
+<body style="background-color: black ; ">
+    
+   
+        <div class="image-grid">
+            <img class="image-grid-col-2 image-grid-row-2" src="images\design\maxresdefault.jpg" alt="architecture">
+            <img src="images\design\SCHEMATICS.jpg" alt="architecture">
+            <img src="images\design\LAYOUT.jpg" alt="architecture">
+            <img src="images\design\pcb_3d_layout.jpg" alt="architecture">
+            <img src="images\design\pcb_gerber_viewer.jpg" alt="architecture">
+        </div>
+        <div class="image-grid">
+            <img class="image-grid-col-2 image-grid-row-2" src="images\design\principal.jpg" alt="architecture">
+            <img src="images\design\layout_555_timer.jpg" alt="architecture">
+            <img src="images\design\pcb_3d_view.jpg" alt="architecture">
+            <img src="images\design\anarchy.jpg" alt="architecture">
+        </div>
+    
+</body>
+</html>
